@@ -40,10 +40,6 @@ include $(DEVKITPRO)/libnx/switch_rules
 APP_TITLE	:=	FPSLocker
 APP_VERSION	:=	v3.3.1
 
-ifeq ($(RELEASE),)
-	APP_VERSION	:=	$(APP_VERSION)-$(shell git describe --always)
-endif
-
 TARGET		:=	$(APP_TITLE)
 BUILD		:=	build
 SOURCES		:=	source source/c4 source/c4/yml source/asmjit/arm source/asmjit/core
